@@ -55,6 +55,7 @@ def run_migrations_offline():
     )
 
     with context.begin_transaction():
+        patch_alembic_version(context)
         context.run_migrations()
 
 
